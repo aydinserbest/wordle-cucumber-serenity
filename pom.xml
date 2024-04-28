@@ -14,4 +14,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+            <dependency>
+                <groupId>net.serenity-bdd</groupId>
+                <artifactId>serenity-cucumber</artifactId>
+                <version>4.1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-junit</artifactId>
+            <version>4.1.6</version>
+        </dependency>
+    </dependencies>
+
 </project>
