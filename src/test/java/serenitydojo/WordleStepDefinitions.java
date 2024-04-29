@@ -14,7 +14,7 @@ public class WordleStepDefinitions {
 
     @Given("the target word is :")
     public void the_target_word_is(DataTable dataTable) {
-        List<Map<String, String>> map = dataTable.asMaps();
+        List<String> map = dataTable.asList();
         System.out.println(map);
 
 

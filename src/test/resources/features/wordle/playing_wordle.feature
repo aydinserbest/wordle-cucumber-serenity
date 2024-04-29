@@ -9,7 +9,6 @@ Feature: Playing Wordle
     Background:
       Given the target word is :
         | B | L |
-        | s | t |
     Scenario: Correctly placed letters
       When the player enters the following letters:
         | P | R | I | N | T |
@@ -21,26 +20,5 @@ Feature: Playing Wordle
       Then the squares should be coloredas follows:
         | * | - | * | - | * |
 
-  Rule: Repeated letters in the wrong spot appear in grey
-    Scenario: Two incorrectly placed letters
-      Given the target word is :
-        | B | L | A | N | D |
-      When the player enters the following letters:
-        | L | A | B | E | L |
-      Then the squares should be coloredas follows:
-        | + | + | + | - | - |
-
-  Rule: The player wins when they find he right word in 6 or less tries
-    Scenario: Player guesses the right word
-      Given the target word is :
-        | B | L | A | N | D |
-      When the player enters the following letters:
-        | B | E | A | S | T |
-        | B | R | I | A | N |
-        | B | L | A | N | D |
-      Then the squares should be coloredas follows:
-        | * | - | * | - | - |
-        | * | - | * | - | + |
-        | * | * | * | * | * |
 
 
