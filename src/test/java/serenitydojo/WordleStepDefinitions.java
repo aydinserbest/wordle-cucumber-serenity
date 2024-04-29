@@ -15,7 +15,11 @@ public class WordleStepDefinitions {
     @Given("the target word is :")
     public void the_target_word_is(List<List<String>> list) {
        // List<String> list = dataTable.asList();
-        System.out.println(list);
+        List<String> collect = list.stream()
+                .flatMap(List::stream)
+                .toList();   //   [B, A, C, D, H, A, C, Y]
+        System.out.println(collect);
+        System.out.println(list);    //   [ [B, A, C, D], [H, A, C, Y] ]
 
 
     }

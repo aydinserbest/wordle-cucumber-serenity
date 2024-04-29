@@ -9,6 +9,7 @@ Feature: Playing Wordle
     Background:
       Given the target word is :
         | B |A|C|D|
+        | H |A|C|Y|
 
     Scenario: Correctly placed letters
       When the player enters the following letters:
