@@ -8,7 +8,8 @@ Feature: Playing Wordle
   Rule: Correctly placed letter appear in green
     Background:
       Given the target word is :
-        | B | L | A | N | D |
+        | B | L |
+        | s | t |
     Scenario: Correctly placed letters
       When the player enters the following letters:
         | P | R | I | N | T |
