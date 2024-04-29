@@ -21,6 +21,8 @@ public class WordleStepDefinitions {
     }
     @When("the player enters the following letters:")
     public void the_player_enters_the_following_letters(io.cucumber.datatable.DataTable dataTable) {
+       List<List<String>> list = dataTable.asLists();
+        System.out.println(list);
 
     }
     @Then("the squares should be coloredas follows:")
