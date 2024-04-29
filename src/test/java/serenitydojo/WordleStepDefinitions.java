@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
 public class WordleStepDefinitions {
 
     @Given("the target word is :")
-    public void the_target_word_is(DataTable dataTable) {
-        List<String> map = dataTable.asList();
-        System.out.println(map);
+    public void the_target_word_is(List<List<String>> list) {
+       // List<String> list = dataTable.asList();
+        System.out.println(list);
 
 
     }
