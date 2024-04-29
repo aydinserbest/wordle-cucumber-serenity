@@ -1,12 +1,22 @@
 package serenitydojo;
 
+import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class WordleStepDefinitions {
+    private List<Character> targetWord;
     @Given("the target word is :")
-    public void the_target_word_is(io.cucumber.datatable.DataTable dataTable) {
+    public void the_target_word_is(List<List<String>> rows) {
+        // Her satırı (aslında burada tek bir satır var) işle
+         targetWord = rows.get(0).stream()  // İlk ve tek satırı al
+                .map(s -> s.charAt(0))  // Her string'in ilk karakterini al
+                .collect(Collectors.toList());
+        System.out.println("Target Word: " + targetWord);
 
     }
     @When("the player enters the following letters:")
