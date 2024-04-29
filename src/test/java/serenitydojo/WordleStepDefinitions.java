@@ -1,6 +1,6 @@
 package serenitydojo;
 
-import io.cucumber.java.DataTableType;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,15 +8,21 @@ import io.cucumber.java.en.When;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import java.util.Collection;
+import java.util.stream.Stream;
+
+
 public class WordleStepDefinitions {
-    private List<Character> targetWord;
     @Given("the target word is :")
-    public void the_target_word_is(List<List<String>> rows) {
-        // Her satırı (aslında burada tek bir satır var) işle
-         targetWord = rows.get(0).stream()  // İlk ve tek satırı al
-                .map(s -> s.charAt(0))  // Her string'in ilk karakterini al
-                .collect(Collectors.toList());
-        System.out.println("Target Word: " + targetWord);
+    public void the_target_word_is(DataTable dataTable) {
+        List<List<String>> lists = dataTable.asLists(String.class); // asLists() kullanarak dönüştürme
+
+        List<String> list = lists.stream()
+                .flatMap(Collection::stream)
+                .toList();
+
+        String targetWord = String.join("", list); // Tek bir kelime oluştur
+        System.out.println(targetWord);
 
     }
     @When("the player enters the following letters:")
