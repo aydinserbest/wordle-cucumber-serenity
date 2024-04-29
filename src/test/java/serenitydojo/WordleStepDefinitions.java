@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,11 +18,19 @@ public class WordleStepDefinitions {
     public void the_target_word_is(DataTable dataTable) {
         List<List<String>> lists = dataTable.asLists(String.class); // asLists() kullanarak dönüştürme
 
-        List<String> list = lists.stream()
-                .flatMap(Collection::stream)
-                .toList();
+//        List<String> list = lists.stream()
+//                .flatMap(Collection::stream)
+//                .toList();
 
-        String targetWord = String.join("", list); // Tek bir kelime oluştur
+        // OR
+        List<String> flattenedList = new ArrayList<>();
+        for (List<String> list : lists) {
+            flattenedList.addAll(list);
+        }
+        String targetWord = String.join("", flattenedList); // Tek bir kelime oluştur
+
+       // String targetWord = String.join("", list); // Tek bir kelime oluştur
+
         System.out.println(targetWord);
 
     }
