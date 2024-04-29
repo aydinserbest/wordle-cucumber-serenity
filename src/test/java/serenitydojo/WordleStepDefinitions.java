@@ -18,13 +18,14 @@ public class WordleStepDefinitions {
 
     @Given("the target word is :")
     public void the_target_word_is(DataTable targetWord) {
-       List<Map<String,String>> list = targetWord.asMaps();
+       Map<String,String> list = targetWord.asMap();
         System.out.println(list);
 
 
     }
     @When("the player enters the following letters:")
     public void the_player_enters_the_following_letters(DataTable dataTable) {
+        //List<Map<String,String>> lists = dataTable.asMaps();
         List<Map<String,String>> lists = dataTable.asMaps();
         System.out.println(lists);
 
