@@ -1,4 +1,4 @@
-package serenitydojo;
+package com.serenitydojo.wordle;
 
 import java.util.Arrays;
 
