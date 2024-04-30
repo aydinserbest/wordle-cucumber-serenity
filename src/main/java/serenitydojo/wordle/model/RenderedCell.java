@@ -14,7 +14,13 @@ public class RenderedCell {
         return new RenderedCell(targetWord);
     }
 
-    public CellColor forEntry(String letter, int position) {
+    public CellColor forEntry(char letter, int position) {
+        if (targetWord.charAt(position) == letter) {
+            return CellColor.GREEN;
+        }
+        else if (targetWord.contains(String.valueOf(letter))) {
+            return CellColor.YELLOW;
+        }
         return null;
     }
 }

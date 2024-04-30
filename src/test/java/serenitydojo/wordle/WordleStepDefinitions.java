@@ -34,7 +34,7 @@ public class WordleStepDefinitions {
         attempts = dataTable.asLists()
                 .stream()
                 .map(cellsInRow -> String.join("", cellsInRow))
-                .toList();
+                .collect(Collectors.toList());
 
         this.attempts.forEach(
                 attempt -> wordleGame.play(attempt)
