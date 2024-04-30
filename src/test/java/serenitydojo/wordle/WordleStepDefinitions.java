@@ -1,6 +1,6 @@
 package serenitydojo.wordle;
 
-import com.serenitydojo.wordle.CellColor;
+import com.serenitydojo.wordle.model.CellColor;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
