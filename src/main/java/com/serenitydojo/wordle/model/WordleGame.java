@@ -1,7 +1,4 @@
-package com.serenitydojo.wordle;
-
-import com.serenitydojo.wordle.model.CellColor;
-import serenitydojo.wordle.model.RenderedCell;
+package com.serenitydojo.wordle.model;
 
 import java.util.ArrayList;
 import java.util.List;

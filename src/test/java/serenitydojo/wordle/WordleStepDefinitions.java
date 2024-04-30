@@ -5,7 +5,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import com.serenitydojo.wordle.WordleGame;
+import com.serenitydojo.wordle.model.WordleGame;
 
 import java.util.List;
 import java.util.stream.Collectors;

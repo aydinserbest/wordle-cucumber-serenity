@@ -1,6 +1,4 @@
-package serenitydojo.wordle.model;
-
-import com.serenitydojo.wordle.model.CellColor;
+package com.serenitydojo.wordle.model;
 
 public class RenderedCell {
     private final String targetWord;

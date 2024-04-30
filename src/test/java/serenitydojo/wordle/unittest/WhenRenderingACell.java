@@ -1,6 +1,7 @@
-package serenitydojo.wordle.model;
+package serenitydojo.wordle.unittest;
 
 import com.serenitydojo.wordle.model.CellColor;
+import com.serenitydojo.wordle.model.RenderedCell;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
