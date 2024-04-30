@@ -27,7 +27,7 @@ Feature: Playing Wordle
       When the player enters the following letters:
         | L | A | B | E | L |
       Then the squares should be colored as follows:
-        | + | + | + | - | + |
+        | + | + | + | - | - |
 
   Rule: The player wins when they find he right word in 6 or less tries
     Scenario: Player guesses the right word
@@ -35,11 +35,11 @@ Feature: Playing Wordle
         | B | L | A | N | D |
       When the player enters the following letters:
         | B | E | A | S | T |
-        | B | R | I | A | N |
+        | B | R | A | I | N |
         | B | L | A | N | D |
       Then the squares should be colored as follows:
         | * | - | * | - | - |
-        | * | - | - | + | + |
+        | * | - | * | - | + |
         | * | * | * | * | * |
 
 

@@ -19,7 +19,7 @@ public class WordleGame {
         List<CellColor> renderedAttempts = new ArrayList<>();
         for (int pos = 0; pos < attempt.length(); pos++) {
             char letter = attempt.charAt(pos);
-            CellColor cellColor = RenderedCell.forTargetWord(targetWord).forEntry(letter, pos);
+            CellColor cellColor = RenderedCell.forTargetWord(targetWord).forEntry(attempt, pos);
             renderedAttempts.add(cellColor);
         }
         stateOfPlay.add(renderedAttempts);
