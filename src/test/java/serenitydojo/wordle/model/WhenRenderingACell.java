@@ -27,6 +27,6 @@ public class WhenRenderingACell {
     public void nonMatchingLettersInTheWrongSpot(){
         // target word: weary
         // position, letter
-        assertThat(RenderedCell.forTargetWord("weary").forEntry('w', 1)).isEqualTo(CellColor.GRAY);
+        assertThat(RenderedCell.forTargetWord("weary").forEntry('z', 1)).isEqualTo(CellColor.GRAY);
     }
 }
